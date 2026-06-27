@@ -1,295 +1,232 @@
-# 🛒 ReadyNest Internship — Data Analytics
+# 🛒 ReadyNest Internship — Data Analytics Portfolio
 
-<div align="center">
-
-![ReadyNest](https://img.shields.io/badge/ReadyNest-Internship-028090?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==)
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-02C39A?style=for-the-badge)
-
-### 📊 E-Commerce Customer Insights & Sales Analytics
-**Intern:** Harshit Saxena &nbsp;|&nbsp; **Organization:** ReadyNest Corp. &nbsp;|&nbsp; **Duration:** June 2026
-
-</div>
+<p align="center">
+  <h2 align="center">📊 E-Commerce Customer Insights & Sales Analytics</h2>
+  <p align="center">
+    <b>Intern:</b> Harshit Saxena • <b>Organization:</b> ReadyNest Corp. • <b>Duration:</b> June 2026
+  </p>
+</p>
 
 ---
 
-## 🔗 Live Dashboards
+# 🔗 Live Dashboards
 
-<div align="center">
-
-| Week | Dashboard | Link |
-|------|-----------|------|
-| 📦 Week 1 | Product Sales & Performance Dashboard | [![Tableau](https://img.shields.io/badge/View%20Dashboard-Tableau%20Public-E97627?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/harshit.saxena4505/viz/readynesttasktrial1/Sheet1) |
-| 👥 Week 2 | Customer Insights & Segmentation Dashboard | [![Tableau](https://img.shields.io/badge/View%20Dashboard-Tableau%20Public-E97627?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/harshit.saxena4505/viz/Task2_17824998555060/Dashboard1) |
-
-</div>
+| Project   | Dashboard                                  | Link             |
+| --------- | ------------------------------------------ | ---------------- |
+| 📦 Week 1 | Product Sales & Performance Dashboard      | ADD_TABLEAU_LINK |
+| 👥 Week 2 | Customer Insights & Segmentation Dashboard | ADD_TABLEAU_LINK |
 
 ---
 
-## 📁 Repository Structure
+# 📁 Repository Structure
 
-```
+```plaintext
 readynest-internship/
-│
-├── 📂 Week 1 - Dataset Analysis & Reporting/
-│   ├── step1_data_loading.py          # Data loading & exploration
-│   ├── step2_data_cleaning.py         # Data cleaning pipeline
-│   ├── step3_eda.py                   # EDA & visualizations
-│   ├── cleaned_data.csv               # Cleaned dataset output
+
+├── Week 1 - Dataset Analysis & Reporting/
+│   ├── step1_data_loading.py
+│   ├── step2_data_cleaning.py
+│   ├── step3_eda.py
+│   ├── cleaned_data.csv
 │   └── charts/
-│       ├── chart1_univariate.png
-│       ├── chart2_top10.png
-│       ├── chart3_timeseries.png
-│       ├── chart4_bivariate.png
-│       └── chart5_dayofweek.png
-│
-├── 📂 Week 2 - Customer Insights & Recommendations/
-│   ├── week2_customer_segmentation.py # Customer segmentation script
-│   ├── customer_segments.csv          # Customer profiles output
+
+├── Week 2 - Customer Insights & Recommendations/
+│   ├── week2_customer_segmentation.py
+│   ├── customer_segments.csv
 │   ├── ReadyNest_Week2_Business_Report.pptx
 │   └── charts/
-│       ├── chart6_segmentation.png
-│       ├── chart7_new_vs_returning.png
-│       ├── chart8_top_customers.png
-│       └── chart9_customer_growth.png
-│
+
 └── README.md
 ```
 
 ---
 
-## 📦 Week 1 — Dataset Analysis & Reporting
+# 📦 Week 1 — Dataset Analysis & Reporting
 
-<details>
-<summary><b>📋 Click to expand Week 1 details</b></summary>
+## 🎯 Objective
 
-### 🎯 Objective
-Analyze a comprehensive E-Commerce dataset, perform data cleaning and EDA, and create an interactive Tableau dashboard.
+Perform data cleaning, exploratory data analysis and build an interactive Tableau dashboard using E-Commerce sales data.
 
-### 📊 Dataset Overview
-| Property | Value |
-|----------|-------|
-| 📄 Source | E-Commerce Online Retail (UCI / Kaggle) |
-| 📏 Raw Rows | 541,909 |
-| ✅ Cleaned Rows | 392,692 |
-| 📌 Columns | 8 → 13 (after feature engineering) |
-| 🌍 Countries | 37 |
-| 📅 Date Range | Dec 2010 – Dec 2011 |
+## 📊 Dataset Overview
 
-### 🧹 Data Cleaning Steps
-- ✅ Removed **5,268 duplicate rows**
-- ✅ Dropped rows with **missing CustomerID** (133,361 rows)
-- ✅ Removed **cancelled orders** (InvoiceNo starting with 'C')
-- ✅ Removed **negative/zero Quantity and UnitPrice**
-- ✅ Converted `InvoiceDate` to datetime format
-- ✅ Added derived columns: `TotalSales`, `Year`, `Month`, `Day`, `Hour`
-- ✅ Standardized text in `Description` and `Country`
-
-### 📈 Key Metrics
-```
-💰 Total Revenue      : £8,887,209
-📦 Total Orders       : 25,900
-👥 Unique Customers   : 4,338
-🌍 Countries Served   : 37
-📅 Peak Month         : November 2011
-⏰ Peak Hour          : 12:00 PM
-📆 Peak Day           : Thursday
-```
-
-### 📊 EDA Charts
-
-#### 1️⃣ Univariate Analysis
-> Distribution of Quantity, Unit Price and Total Sales
-
-#### 2️⃣ Top 10 Analysis
-> Top countries and products by revenue
-
-#### 3️⃣ Monthly Revenue Trend
-> Sales trend across all months
-
-#### 4️⃣ Bivariate Analysis
-> Correlation heatmap and scatter plot
-
-#### 5️⃣ Sales by Day of Week
-> Which day drives most sales
-
-### 🖥️ Tableau Dashboard
-[![Week 1 Dashboard](https://img.shields.io/badge/🔗%20Open%20Week%201%20Dashboard-Tableau%20Public-E97627?style=for-the-badge)](https://public.tableau.com/app/profile/harshit.saxena4505/viz/readynesttasktrial1/Sheet1)
-
-**Dashboard includes:**
-- 📈 Monthly Revenue Trend (Line Chart)
-- 🌍 Top 10 Countries by Revenue (Bar Chart)
-- 📦 Top 10 Products by Revenue (Bar Chart)
-- ⏰ Sales by Hour of Day (Bar Chart)
-- 📆 Sales by Day of Week (Bar Chart)
-- 🗺️ Geographic Revenue Map
-- 🔢 KPI Cards (Revenue, Orders, Customers)
-
-</details>
+| Metric       | Value               |
+| ------------ | ------------------- |
+| Rows         | 541,909             |
+| Cleaned Rows | 392,692             |
+| Countries    | 37                  |
+| Columns      | 13                  |
+| Date Range   | Dec 2010 – Dec 2011 |
 
 ---
 
-## 👥 Week 2 — Customer Insights & Recommendation Project
+## 🧹 Data Cleaning
 
-<details>
-<summary><b>📋 Click to expand Week 2 details</b></summary>
+✅ Removed duplicates
+✅ Handled missing values
+✅ Removed cancelled orders
+✅ Removed invalid sales records
+✅ Feature engineering
+✅ Standardized formatting
 
-### 🎯 Objective
-Analyze customer and sales data to uncover actionable insights, segment customers, and provide business recommendations.
+---
 
-### 👤 Customer Segmentation
+## 📈 Key Metrics
 
-| Segment | Customers | Threshold | Revenue Share |
-|---------|-----------|-----------|---------------|
-| 🏆 High Value | ~1,085 (25%) | Spend > £1,500 | Very High |
-| ⭐ Medium Value | ~2,169 (50%) | £300 – £1,500 | Moderate |
-| 🌱 Low Value | ~1,084 (25%) | Spend < £300 | Low |
-
-### 📊 Customer Metrics
-```
-👥 Total Customers       : 4,338
-🔄 Returning Customers   : 74.5%
-🆕 New Customers         : 25.5%
-💰 Avg Customer Spend    : £2,048
-📦 Avg Orders/Customer   : 5.97
-🏆 Top Customer Spend    : £280,206
+```text
+Revenue          : £8.88M
+Orders           : 25,900
+Customers        : 4,338
+Countries        : 37
+Peak Month       : November
+Peak Hour        : 12 PM
+Peak Day         : Thursday
 ```
 
-### 📊 Customer Analysis Charts
+---
 
-#### 6️⃣ Customer Segmentation
-> Pie chart and revenue bar by High/Medium/Low Value segments
+# 📷 Week 1 Dashboard Preview
 
-#### 7️⃣ New vs Returning Customers
-> Distribution and average spend comparison
-
-#### 8️⃣ Top 10 Customers by Spend
-> Horizontal bar chart of highest value customers
-
-#### 9️⃣ Customer Growth Trend
-> Monthly active customers over time
-
-### 🖥️ Tableau Dashboard
-[![Week 2 Dashboard](https://img.shields.io/badge/🔗%20Open%20Week%202%20Dashboard-Tableau%20Public-E97627?style=for-the-badge)](https://public.tableau.com/app/profile/harshit.saxena4505/viz/Task2_17824998555060/Dashboard1)
-
-**Dashboard includes:**
-- 👥 New vs Returning Customers
-- 🥧 Customer Segment Distribution (Pie)
-- 📈 Customer Growth Trend
-- 🏆 Top 10 Customers by Spend
-- 🗺️ Customer Geographic Analysis
-- 💰 Revenue by Customer Segment
-- 📊 Average Order Value by Segment
-
-</details>
+![Week 1 Dashboard](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/dashboard_week1.png)
 
 ---
 
-## 💡 Key Business Insights
+## 📊 EDA Charts
 
-<table>
-<tr>
-<td width="50%">
+### 📈 Monthly Revenue Trend
 
-**01 🇬🇧 UK Market Dominance**
-> UK accounts for **82% of total revenue** (£7.28M). Heavy reliance on one market creates risk — diversification needed.
+![Chart](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/chart3_timeseries.png)
 
-**02 🔄 Strong Customer Loyalty**
-> **74.5% of customers are returning buyers**, showing strong brand loyalty and product satisfaction.
+### 🌍 Top Countries & Products
 
-**03 📅 Seasonal Revenue Spike**
-> Revenue peaks in **Q4 (Oct–Dec)**. November alone contributes **12.7% of annual revenue** — driven by holiday shopping.
+![Chart](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/chart2_top10.png)
 
-</td>
-<td width="50%">
+### 📦 Product Distribution
 
-**04 🏆 High Value Customers Drive Revenue**
-> Top 25% of customers contribute disproportionately. **Retaining them is the #1 priority.**
+![Chart](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/chart1_univariate.png)
 
-**05 ⏰ Midday & Weekday Sales Peak**
-> Orders peak at **12 PM on Thursdays**. Marketing campaigns should target these windows.
+### 📊 Bivariate Analysis
 
-**06 🌍 International Market Potential**
-> Netherlands, EIRE and Germany show organic demand. Targeted expansion could drive **20%+ growth.**
+![Chart](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/chart4_bivariate.png)
 
-</td>
-</tr>
-</table>
+### 📆 Sales by Day
+
+![Chart](Week%201%20-%20Dataset%20Analysis%20%26%20Reporting/charts/chart5_dayofweek.png)
 
 ---
 
-## 🎯 Business Recommendations
+# 👥 Week 2 — Customer Insights & Recommendations
 
-| # | Recommendation | Priority | Impact |
-|---|---------------|----------|--------|
-| 1 | 🏆 **VIP Loyalty Program** — Exclusive rewards for High Value customers | 🔴 HIGH | Revenue Retention |
-| 2 | 🌍 **International Expansion** — Focus on Netherlands, Germany, France | 🔴 HIGH | Revenue Growth |
-| 3 | 📅 **Seasonal Campaign Strategy** — Pre-plan Q4 campaigns 3 months in advance | 🔴 HIGH | Peak Revenue |
-| 4 | 🔄 **Win-Back Low Value Customers** — Personalized email & bundle offers | 🟡 MEDIUM | Customer Growth |
-| 5 | ⏰ **Time-Targeted Marketing** — Launch campaigns Thursday at 11 AM | 🟡 MEDIUM | Conversion Rate |
-| 6 | 📦 **Bundle Top Products** — Gift sets for Q4 to increase avg order value | 🟡 MEDIUM | AOV Growth |
+## 🎯 Objective
+
+Segment customers, analyze purchasing behavior and generate business recommendations.
 
 ---
 
-## 🛠️ Tech Stack
+## 👤 Customer Metrics
 
-<div align="center">
-
-| Category | Tools |
-|----------|-------|
-| 🐍 Language | Python 3.x |
-| 📊 Data Analysis | Pandas, NumPy |
-| 📈 Visualization | Matplotlib, Seaborn |
-| 🖥️ Dashboard | Tableau Public |
-| 🗄️ Data Format | CSV |
-| 🔧 Version Control | Git & GitHub |
-
-</div>
+```text
+Customers            : 4,338
+Returning Customers  : 74.5%
+New Customers        : 25.5%
+Average Spend        : £2,048
+Average Orders       : 5.97
+Top Customer Spend   : £280,206
+```
 
 ---
 
-## ▶️ How to Run
+## 👥 Customer Segmentation
 
-### Prerequisites
+| Segment        | Customers |
+| -------------- | --------- |
+| 🏆 High Value  | 25%       |
+| ⭐ Medium Value | 50%       |
+| 🌱 Low Value   | 25%       |
+
+---
+
+# 📷 Week 2 Dashboard Preview
+
+![Week 2 Dashboard](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/dashboard_week2.png)
+
+---
+
+## 📊 Customer Charts
+
+### 🥧 Customer Segment Distribution
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart6_segmentation.png)
+
+### 🔄 New vs Returning Customers
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart7_new_vs_returning.png)
+
+### 🏆 Top 10 Customers
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart8_top_customers.png)
+
+### 📈 Customer Growth Trend
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart9_customer_growth.png)
+
+### 🌍 Customer Geographic Analysis
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart10_country_map.png)
+
+### 💰 Revenue by Segment
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart11_revenue_segment.png)
+
+### 📊 Average Order Value
+
+![Chart](Week%202%20-%20Customer%20Insights%20%26%20Recommendations/charts/chart12_avg_order_value.png)
+
+---
+
+# 💡 Business Recommendations
+
+🏆 VIP Loyalty Program
+🌍 International Expansion
+📅 Seasonal Campaign Strategy
+🔄 Win-Back Campaigns
+⏰ Time-Targeted Marketing
+📦 Product Bundling
+
+---
+
+# 🛠️ Tech Stack
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Tableau Public
+* GitHub
+
+---
+
+# ▶️ Run Project
+
 ```bash
 pip install pandas numpy matplotlib seaborn
 ```
 
-### Week 1
 ```bash
-# Step 1: Load data
 python step1_data_loading.py
-
-# Step 2: Clean data
 python step2_data_cleaning.py
-
-# Step 3: EDA & visualizations
 python step3_eda.py
-```
-
-### Week 2
-```bash
-# Customer segmentation
 python week2_customer_segmentation.py
 ```
 
 ---
 
-## 📬 Contact
-
-<div align="center">
+# 📬 Contact
 
 **Harshit Saxena**
-ReadyNest Data Analytics Intern | June 2026
-
-[![Tableau](https://img.shields.io/badge/Tableau%20Public-Profile-E97627?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/harshit.saxena4505)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github&logoColor=white)](https://github.com)
+ReadyNest Data Analytics Intern
 
 ---
 
-*Built with ❤️ for ReadyNest Corp. Internship Program*
-*"Learn. Analyze. Communicate. Get recognized!"*
+⭐ Built for ReadyNest Internship Program
 
-</div>
